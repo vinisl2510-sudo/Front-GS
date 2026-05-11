@@ -1,0 +1,132 @@
+/* ══════════════════════════════════════
+   QUEM SOMOS — PÁGINA
+══════════════════════════════════════ */
+
+.quem-somos {
+  padding: 80px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.qs-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.qs-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #4a55f5;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.qs-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e8e8ff;
+  margin-bottom: 0.75rem;
+}
+
+.qs-header p {
+  font-size: 0.95rem;
+  color: #7777aa;
+}
+
+/* Grid de cards */
+.qs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+/* Card individual */
+.qs-card {
+  background-color: #16162a;
+  border: 1px solid #2a2a45;
+  border-radius: 14px;
+  padding: 1.75rem 1.25rem 1.5rem;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.qs-card:hover {
+  border-color: #4a55f5;
+  transform: translateY(-4px);
+}
+
+/* Container da foto — TRAVA o tamanho */
+.qs-foto {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  min-height: 90px;
+  max-width: 90px;
+  max-height: 90px;
+  margin: 0 auto 1.25rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1e1e38;
+  border: 1px solid #2a2a55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Imagem travada — sem exceção */
+.qs-foto img {
+  width: 90px !important;
+  height: 90px !important;
+  max-width: 90px !important;
+  max-height: 90px !important;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Iniciais de fallback */
+.qs-initials {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4a55f5;
+  letter-spacing: 0.05em;
+  z-index: 0;
+}
+
+/* Informações */
+.qs-info h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e8e8ff;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.qs-rm {
+  font-size: 0.8rem;
+  color: #4a55f5;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+  .quem-somos {
+    padding: 60px 20px;
+  }
+
+  .qs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qs-card {
+    max-width: 100%;
+  }
+}
