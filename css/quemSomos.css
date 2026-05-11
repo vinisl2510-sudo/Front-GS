@@ -2,47 +2,93 @@
    QUEM SOMOS — PÁGINA
 ══════════════════════════════════════ */
 
+
+/* CONTAINER PRINCIPAL */
 .quem-somos {
-  padding: 80px 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* CARD ESQUERDA */
 .qs-header {
+  position: absolute;
+  width: 420px;
+  height: 220px;
+  background: #16162a;
+  border: 1px solid #2a2a45;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  margin-bottom: 3.5rem;
+  cursor: pointer;
+  z-index: 2;
+
+  transition: all 0.8s ease;
 }
 
+/* centralizado inicialmente */
+.quem-somos .qs-header {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ao clicar desliza */
+.quem-somos.active .qs-header {
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+/* TEXTO */
 .qs-label {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   color: #4a55f5;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .qs-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 3rem;
   color: #e8e8ff;
-  margin-bottom: 0.75rem;
+  margin-bottom: .8rem;
 }
 
 .qs-header p {
-  font-size: 0.95rem;
   color: #7777aa;
 }
 
-/* Grid de cards */
+/* GRID DIREITA */
 .qs-grid {
+  position: absolute;
+  right: 10%;
+
+  width: 420px;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+
+  opacity: 0;
+  transform: translateX(100px);
+  pointer-events: none;
+
+  transition: all 0.8s ease;
 }
 
+/* aparece smooth */
+.quem-somos.active .qs-grid {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
 /* Card individual */
 .qs-card {
   background-color: #16162a;
@@ -58,16 +104,17 @@
 .qs-card:hover {
   border-color: #4a55f5;
   transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(74, 85, 245, 0.35);
 }
 
 /* Container da foto — TRAVA o tamanho */
 .qs-foto {
-  width: 90px;
-  height: 90px;
-  min-width: 90px;
-  min-height: 90px;
-  max-width: 90px;
-  max-height: 90px;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   margin: 0 auto 1.25rem;
   border-radius: 12px;
   overflow: hidden;
@@ -81,10 +128,10 @@
 
 /* Imagem travada — sem exceção */
 .qs-foto img {
-  width: 90px !important;
-  height: 90px !important;
-  max-width: 90px !important;
-  max-height: 90px !important;
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
   object-fit: cover;
   display: block;
   position: absolute;
@@ -128,5 +175,46 @@
 
   .qs-card {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  .quem-somos {
+    height: auto;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 120px 20px 60px;
+  }
+
+  /* remove a animação lateral */
+  .quem-somos.active .qs-header {
+    left: unset !important;
+    transform: none !important;
+  }
+
+  /* FORÇA sair do absolute */
+  .qs-header {
+    position: static !important;
+    width: min(500px, 90vw);
+    margin-bottom: 40px;
+  }
+
+  /* FORÇA sair do absolute */
+  .qs-grid {
+    position: static !important;
+
+    width: min(700px, 95vw);
+
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: all !important;
+
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 }

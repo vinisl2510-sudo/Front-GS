@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Somos - SoulUp</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/quem_somos.css">
+  <link rel="stylesheet" href="../css/quemSomos.css">
 </head>
 <body>
-
+  
   <!-- ════════════════ NAVEGAÇÃO ════════════════ -->
   <nav>
-    <a href="#" class="logo">Soul<span>Up</span></a>
+    <a href="../index.html" class="logo">Soul<span>Up</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html" id="nav-home">Inicio</a></li>
       <li><a href="sobre.html" id="nav-about">Sobre</a></li>
@@ -22,73 +22,75 @@
   </nav>
 
   <!-- ════════════════ QUEM SOMOS ════════════════ -->
-  <section class="quem-somos">
+  <section class="quem-somos" id="quemSomos">
 
-    <div class="qs-header">
-      <span class="qs-label">EQUIPE</span>
-      <h1>Quem Somos</h1>
-      <p>Conheça os integrantes por trás do SoulUp.</p>
+  <div class="qs-header" id="qsHeader">
+    <span class="qs-label">EQUIPE</span>
+    <h1>Quem Somos</h1>
+    <p>Clique e conheça os integrantes por trás do SoulUp.</p>
+  </div>
+
+  <div class="qs-grid" id="qsGrid">
+
+    <div class="qs-card">
+      <div class="qs-foto">
+        <img src="../img/nicolas_martins.jpg" alt="Foto de Nicolas Martins">
+      </div>
+      <div class="qs-info">
+        <h3>Nicolas Martins</h3>
+        <span class="qs-rm">RM 573178</span>
+      </div>
     </div>
 
-    <div class="qs-grid">
-
-      <div class="qs-card">
-        <div class="qs-foto">
-          <img src="../img/nicolas_martins.jpg" alt="Foto de Nicolas Martins" width="90" height="90">
-          <span class="qs-initials">NM</span>
-        </div>
-        <div class="qs-info">
-          <h3>Nicolas Martins</h3>
-          <span class="qs-rm">RM 573178</span>
-        </div>
+    <div class="qs-card">
+      <div class="qs-foto">
+        <img src="../img/henrique.jpeg" alt="Foto de Henrique Soares">
       </div>
-
-      <div class="qs-card">
-        <div class="qs-foto">
-          <img src="../img/henrique.jpeg" alt="Foto de Henrique Soares" width="90" height="90">
-          <span class="qs-initials">HS</span>
-        </div>
-        <div class="qs-info">
-          <h3>Henrique Soares</h3>
-          <span class="qs-rm">RM 573618</span>
-        </div>
+      <div class="qs-info">
+        <h3>Henrique Soares</h3>
+        <span class="qs-rm">RM 573618</span>
       </div>
-
-      <div class="qs-card">
-        <div class="qs-foto">
-          <img src="../img/vinicius_soares.jpg" alt="Foto de Vinicius Soares" width="90" height="90">
-          <span class="qs-initials">VS</span>
-        </div>
-        <div class="qs-info">
-          <h3>Vinicius Soares</h3>
-          <span class="qs-rm">RM 573351</span>
-        </div>
-      </div>
-
-      <div class="qs-card">
-        <div class="qs-foto">
-          <img src="../img/nicolas_frazao.jpg" alt="Foto de Nicolas Frazão" width="90" height="90">
-          <span class="qs-initials">NF</span>
-        </div>
-        <div class="qs-info">
-          <h3>Nicolas Frazão</h3>
-          <span class="qs-rm">—</span>
-        </div>
-      </div>
-
-      <div class="qs-card">
-        <div class="qs-foto">
-          <img src="../img/caua_bertini.jpg" alt="Foto de Caua Bertini" width="90" height="90">
-          <span class="qs-initials">CB</span>
-        </div>
-        <div class="qs-info">
-          <h3>Caua Bertini</h3>
-          <span class="qs-rm">—</span>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <div class="qs-card">
+      <div class="qs-foto">
+        <img src="../img/vinicius_soares.jpg" alt="Foto de Vinicius Soares">
+      </div>
+      <div class="qs-info">
+        <h3>Vinicius Soares</h3>
+        <span class="qs-rm">RM 573351</span>
+      </div>
+    </div>
+
+    <div class="qs-card">
+      <div class="qs-foto">
+        <img src="../img/nicolas_frazao.jpg" alt="Foto de Nicolas Frazão">
+      </div>
+      <div class="qs-info">
+        <h3>Nicolas Frazão</h3>
+        <span class="qs-rm">RM 568780</span>
+      </div>
+    </div>
+
+    <div class="qs-card">
+      <div class="qs-foto">
+        <img src="../img/caua.png" alt="Foto de Caua Bertini">
+      </div>
+      <div class="qs-info">
+        <h3>Cauã Bertini</h3>
+        <span class="qs-rm">RM 570451</span>
+      </div>
+    </div>
+
+  </div>
+  <script src="../javaScript/quemSomos.js"></script>
+</section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer">
+    <p>© 2026 SoulUp · Projeto acadêmico FIAP · Todos os direitos reservados</p>
+  </footer>
+
 
 </body>
 </html>
