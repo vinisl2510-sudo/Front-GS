@@ -184,6 +184,7 @@
 .btn-enviar {
   background-color: #4a55f5;
   color: #fff;
+  margin-top: 30px;
   border: none;
   border-radius: 10px;
   padding: 0.9rem 1.5rem;
@@ -221,4 +222,61 @@
   .form-row {
     grid-template-columns: 1fr;
   }
+}
+
+#modalMensagemEnviada {
+    border: none;
+    padding: 0;
+    background: transparent;
+
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+#modalMensagemEnviada::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+.modal-content {
+    background: #0f1025;
+    border: 1px solid rgba(110, 86, 255, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    width: 450px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(88, 76, 255, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: #a5a7c5;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.modal-btn {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    background: #5a5cff;
+    color: white;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
 }

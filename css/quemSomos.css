@@ -192,13 +192,11 @@
     padding: 120px 20px 60px;
   }
 
-  /* remove a animação lateral */
   .quem-somos.active .qs-header {
     left: unset !important;
     transform: none !important;
   }
 
-  /* FORÇA sair do absolute */
   .qs-header {
     position: static !important;
     width: min(500px, 90vw);
